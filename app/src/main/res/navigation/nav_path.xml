@@ -7,7 +7,31 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.salam94.ui.MainFragment"
+        android:name="com.salam94.trinityiv.ui.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_contactDetailFragment"
+            app:destination="@id/contactDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.salam94.trinityiv.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/contactDetailFragment"
+        android:name="com.salam94.trinityiv.ui.detail.ContactDetailFragment"
+        android:label="fragment_contact_detail"
+        tools:layout="@layout/fragment_contact_detail" >
+
+        <argument
+            android:name="contact"
+            app:argType="com.salam94.trinityiv.model.Contact" />
+
+
+    </fragment>
+
 </navigation>

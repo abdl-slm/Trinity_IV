@@ -3,12 +3,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.salam94.ui.MainFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.MainFragment">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:textSize="24sp"
+            android:text="@string/my_contacts" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_margin="10dp"
+        android:id="@+id/edtSearch"
+        android:layout_below="@id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_toStartOf="@id/btnSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:layout_margin="10dp"
+        android:id="@+id/btnSearch"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_search_category_default"
+        android:layout_below="@id/customToolbar"
+        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Test Layout" />
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/edtSearch"
+        android:id="@+id/recyclerContact"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="vertical"
+        app:spanCount="2"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/blue"
+        android:src="@android:drawable/ic_menu_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

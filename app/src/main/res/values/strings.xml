@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Trinity IV</string>
+    <string name="btn_login">Login</string>
+    <string name="profile">My Profile</string>
+    <string name="btn_logout">Logout</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="my_contacts">My Contacts</string>
+
 </resources>
